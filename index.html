@@ -11,11 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       <script src="javascripts/all.js" type="text/javascript"></script>
 
-      <script>
-        $(function() {
-          setupLanguages(["json"]);
-        });
-      </script>
   </head>
 
   <body class="index">
@@ -27,9 +22,6 @@
     </a>
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="json">json</a>
-        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -49,22 +41,23 @@
 
 <h2 id="status">Status</h2>
 
-<blockquote>
 <p>GET service/GetConfig/?param[]=DB_HOST&amp;param[]=GLZ_HOST</p>
 
-<p>Response:
-<code class="prettyprint">json
-{
-  &quot;success&quot;: true,
-  &quot;params&quot;: {
-    &quot;DB_HOST&quot;:&quot;localhost&quot;,
-    &quot;GLZ_HOST&quot;: null,
-  }
-}
-</code></p>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"DB_HOST"</span><span class="p">:</span><span class="s2">"localhost"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"GLZ_HOST"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="err">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <p>GET service/GetOfflineStatus/</p>
 
+<blockquote>
 <p>Response:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -77,9 +70,9 @@
 
 <h2 id="user">User</h2>
 
-<blockquote>
-<p><code class="prettyprint">POST user/CheckShibboleth</code></p>
+<p>POST user/CheckShibboleth</p>
 
+<blockquote>
 <p>Response:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -89,15 +82,13 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<blockquote>
 <p>POST user/ShibbolethAttributes/</p>
-</blockquote>
-
-<p>&lt; Parameters</p>
-
-<p>&lt; <em>loginId</em> User E-mail</p>
 
 <blockquote>
+<p>Parameters</p>
+
+<p><em>loginId</em> User E-mail</p>
+
 <p>Response example:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -120,9 +111,9 @@
 
 <blockquote>
 <p>POST user/ShibbolethLogin</p>
-</blockquote>
 
-<p>&lt; Parameters:</p>
+<p>Parameters:</p>
+</blockquote>
 
 <ul>
 <li><em>loginId</em> User E-mail</li>
@@ -189,10 +180,6 @@
 
           <h1 id="errors">Errors</h1>
 
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
 <table><thead>
 <tr>
 <th>Error Code</th>
@@ -200,56 +187,21 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request &ndash; Your request sucks</td>
+<td>-2</td>
+<td>Utente non trovato</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized &ndash; Your API key is wrong</td>
+<td>-4</td>
+<td>Password errata</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&rsquo;m a teapot</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
+<td>-6</td>
+<td>Parametri non corretti</td>
 </tr>
 </tbody></table>
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="json">json</a>
-          </div>
       </div>
     </div>
   </body>
