@@ -50,8 +50,9 @@
 <h2 id="status">Status</h2>
 
 <blockquote>
-<p>GET service/GetConfig/?param[]=DB_HOST&amp;param[]=GLZ_HOST
-Response:
+<p>GET service/GetConfig/?param[]=DB_HOST&amp;param[]=GLZ_HOST</p>
+
+<p>Response:
 <code class="prettyprint">json
 {
   &quot;success&quot;: true,
@@ -62,8 +63,9 @@ Response:
 }
 </code></p>
 
-<p>GET service/GetOfflineStatus/
-Response:</p>
+<p>GET service/GetOfflineStatus/</p>
+
+<p>Response:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -76,8 +78,9 @@ Response:</p>
 <h2 id="user">User</h2>
 
 <blockquote>
-<p><code class="prettyprint">POST user/CheckShibboleth</code>
-Response:</p>
+<p><code class="prettyprint">POST user/CheckShibboleth</code></p>
+
+<p>Response:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
     </span><span class="nt">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
@@ -90,121 +93,99 @@ Response:</p>
 <p>POST user/ShibbolethAttributes/</p>
 </blockquote>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Mandatory</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>loginId</td>
-<td>yes</td>
-<td>User E-mail</td>
-</tr>
-</tbody></table>
+<p>&lt; Parameters</p>
+
+<p>&lt; <em>loginId</em> User E-mail</p>
 
 <blockquote>
-<p>Response example:
-<code class="prettyprint">json
-{
-    &quot;success&quot;: true,
-    &quot;id&quot;: 1,
-    &quot;loginId&quot;: &quot;user@myz.it&quot;,
-    &quot;groupId&quot;: 1,
-    &quot;firstName&quot;: &quot;Mario&quot;,
-    &quot;lastName&quot;: &quot;Rossi&quot;,
-    &quot;role&quot;: &quot;string&quot;,
-    &quot;gender&quot;: &quot;M&quot;,
-    &quot;apps&quot;: &quot;string&quot;,
-    &quot;status&quot;: 2,
-    &quot;otherGroupId&quot;: 1,
-    &quot;otherRole&quot;: null,
-    &quot;mail_ok&quot;: &quot;1&quot;,
-    &quot;upgrade_ok&quot;: &quot;0&quot;
-}
-</code></p>
+<p>Response example:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"loginId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@myz.it"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mario"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rossi"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"apps"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"otherGroupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"otherRole"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"mail_ok"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"upgrade_ok"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
+<blockquote>
 <p>POST user/ShibbolethLogin</p>
 </blockquote>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Mandatory</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>loginId</td>
-<td>yes</td>
-<td>User E-mail</td>
-</tr>
-<tr>
-<td>password</td>
-<td>yes</td>
-<td>User password</td>
-</tr>
-</tbody></table>
+<p>&lt; Parameters:</p>
+
+<ul>
+<li><em>loginId</em> User E-mail</li>
+<li><em>password</em> User password</li>
+</ul>
 
 <blockquote>
-<p>Response example:
-<code class="prettyprint">json
-{
-    &quot;success&quot;: true,
-    &quot;id&quot;     : 1,
-    &quot;FK_gestionale_id&quot; : 1,
-    &quot;FK_userGroup_id&quot;: 1,
-    &quot;dateCreation&quot;: &quot;29/10/2015 00:00:00&quot;,
-    &quot;isActive&quot;: true,
-    &quot;isSuspended&quot;: true,
-    &quot;dateSuspended&quot;: &quot;29/10/2015 00:00:00&quot;,
-    &quot;isWarned&quot;: true
-    &quot;dateWarned&quot;: &quot;29/10/2015 00:00:00&quot;,
-    &quot;isTempSuspended&quot;: true
-    &quot;loginId&quot;: &quot;string&quot;,
-    &quot;password&quot;: &quot;string&quot;,
-    &quot;loginId&quot;: &quot;string&quot;,
-    &quot;password&quot;: &quot;string&quot;,
-    &quot;password_tmp&quot;: &quot;string&quot;,
-    &quot;firstName&quot;: &quot;string&quot;,
-    &quot;lastName&quot;: &quot;string&quot;,
-    &quot;title&quot;: &quot;null|string&quot;,
-    &quot;companyName&quot;: &quot;null|string&quot;,
-    &quot;address&quot;: &quot;string&quot;,
-    &quot;city&quot;: &quot;string&quot;,
-    &quot;FK_district_id&quot;: &quot;integer&quot;,
-    &quot;zip&quot;: &quot;string&quot;,
-    &quot;state&quot;: &quot;null|string&quot;,
-    &quot;FK_country_id&quot;: &quot;integer&quot;,
-    &quot;phone&quot;: &quot;null|string&quot;,
-    &quot;phone2&quot;: &quot;null|string&quot;,
-    &quot;mobile&quot;: &quot;null|string&quot;,
-    &quot;fax&quot;: &quot;null|string&quot;,
-    &quot;email&quot;: &quot;string:regex(~\@~)&quot;,
-    &quot;www&quot;: &quot;null|string&quot;,
-    &quot;birthday&quot;: &quot;string:regex(~\d{2}\/\d{2}\/\d{4}~)&quot;,
-    &quot;sex&quot;: &quot;string:regex(~[FM]~)&quot;,
-    &quot;confirmCode&quot;: &quot;string&quot;,
-    &quot;wantNewsletter&quot;: true
-    &quot;isInMailinglist&quot;: true
-    &quot;position&quot;: null,
-    &quot;department&quot;: null,
-    &quot;cf&quot;: &quot;&quot;,
-    &quot;note&quot;: &quot;&quot;,
-    &quot;md5&quot;: &quot;&quot;,
-    &quot;lastLogin&quot;: &quot;29/10/2015 00:00:00&quot;,
-    &quot;precLogin&quot;: &quot;29/10/2015 00:00:00&quot;,
-    &quot;creationUser&quot;: &quot;Creation user&quot;,
-    &quot;lastModifyUser&quot;: &quot;2015-29-10&quot;,
-    &quot;regFromSite&quot;: &quot;string&quot;,
-    &quot;otherUserGroup&quot;: 1,
-    &quot;fulltextsearch&quot;: &quot;&quot;,
-    &quot;lastModify&quot;: &quot;29/10/2015 00:00:00&quot;,
-    &quot;alert&quot;: &quot;string&quot;
-}
-</code></p>
+<p>Response example:</p>
 </blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"FK_gestionale_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"FK_userGroup_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"dateCreation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29/10/2015 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"isActive"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"isSuspended"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"dateSuspended"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29/10/2015 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"isWarned"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="s2">"dateWarned"</span><span class="err">:</span><span class="w"> </span><span class="s2">"29/10/2015 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"isTempSuspended"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="s2">"loginId"</span><span class="err">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"loginId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password_tmp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"companyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"FK_district_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"FK_country_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"mobile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string:regex(~\@~)"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"www"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"birthday"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string:regex(~\d{2}\/\d{2}\/\d{4}~)"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string:regex(~[FM]~)"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"confirmCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"wantNewsletter"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="s2">"isInMailinglist"</span><span class="err">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="s2">"position"</span><span class="err">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"cf"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"md5"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"lastLogin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29/10/2015 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"precLogin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29/10/2015 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"creationUser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Creation user"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"lastModifyUser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-29-10"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"regFromSite"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"otherUserGroup"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fulltextsearch"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"lastModify"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29/10/2015 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"alert"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
           <h1 id="errors">Errors</h1>
 
