@@ -37,13 +37,11 @@
       <div class="content">
         <h1 id="myz-api-v2">MYZ API v2</h1>
 
-<p>API documentation page was created with <a href="http://github.com/tripit/slate">Slate</a>.</p>
-
 <h2 id="status">Status</h2>
 
+<blockquote>
 <p>GET service/GetConfig/?param[]=DB_HOST&amp;param[]=GLZ_HOST</p>
 
-<blockquote>
 <p>Response:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -55,9 +53,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
+<blockquote>
 <p>GET service/GetOfflineStatus/</p>
 
-<blockquote>
 <p>Response:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -70,9 +68,9 @@
 
 <h2 id="user">User</h2>
 
+<blockquote>
 <p>POST user/CheckShibboleth</p>
 
-<blockquote>
 <p>Response:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -82,9 +80,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
+<blockquote>
 <p>POST user/ShibbolethAttributes/</p>
 
-<blockquote>
 <p>Parameters</p>
 
 <p><em>loginId</em> User E-mail</p>
@@ -135,29 +133,27 @@
     </span><span class="nt">"isWarned"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
     </span><span class="s2">"dateWarned"</span><span class="err">:</span><span class="w"> </span><span class="s2">"29/10/2015 00:00:00"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"isTempSuspended"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-    </span><span class="s2">"loginId"</span><span class="err">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"loginId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"password_tmp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"companyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"FK_district_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"FK_country_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"phone2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"mobile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string:regex(~\@~)"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"www"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null|string"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"birthday"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string:regex(~\d{2}\/\d{2}\/\d{4}~)"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string:regex(~[FM]~)"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"loginId"</span><span class="err">:</span><span class="w"> </span><span class="s2">"mario.rossi@myz.it"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dsdsdsewewgf"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password_tmp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urijjhhdfkjfkdoie"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mario"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rossi"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dott."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"companyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MYZ"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"via A. Gozzini"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pisa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"FK_district_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"56011"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"FK_country_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="err">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"mobile"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mario.rossi@myz.it"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"www"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"birthday"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29/10/1990"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"confirmCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"wantNewsletter"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
     </span><span class="s2">"isInMailinglist"</span><span class="err">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
